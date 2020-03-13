@@ -18,6 +18,15 @@ public class Main {
         int[] arr = {-4,-1,0,3,10};
         int[] newArr = getSortedPow(arr);
         System.out.println(Arrays.toString(newArr));
+
+        //Вернуть матрицу в виде списка ее элементов.
+
+        int[][] arr2 = {{1, 2}, {3, 4}, {5, 6}};
+        List<Integer> res2 = Arrays.stream(arr2)
+                .flatMapToInt(ints -> Arrays.stream(ints))
+                .boxed()
+                .collect(Collectors.toList());
+        System.out.println(res2);
         System.out.println("test");
     }
 
